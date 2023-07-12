@@ -13,9 +13,9 @@ const SecondToolTip = ({text, children}) =>{
     }
 
     return(
-        <div className = "tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className = "tooltiptext" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             {isHover && (
-                <div className="tooltiptext">
+                <div className="tooltip">
                     <p>{text}</p>
                 </div>
             )}
