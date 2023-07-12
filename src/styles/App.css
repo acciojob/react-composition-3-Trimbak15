@@ -1,1 +1,11 @@
 
+.tooltiptext{
+    background-color: rgb(239, 86, 86);
+    color:white;
+    width: 10%;
+    text-align: center;
+    border-radius: 5px;
+}
+tooltip{
+    display: inline-block;
+}
