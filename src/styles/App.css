@@ -1,11 +1,23 @@
-
-.tooltiptext{
-    background-color: rgb(239, 86, 86);
-    color:white;
-    width: 10%;
-    text-align: center;
-    border-radius: 5px;
-}
-/* .tooltiptext{
-    display: inline-block;
-} */
+.tooltip {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(50%);
+    width: 220px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  

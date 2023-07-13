@@ -1,27 +1,30 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-const SecondToolTip = ({text, children}) =>{
+const SecondToolTip = ({ text, children }) => {
+  const [isHover, setIsHover] = useState(false);
 
-    const [isHover, setIsHover] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
 
-    const handleMouseEnter = () =>{
-        setIsHover(true);
-    }
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
 
-    const handleMouseLeave = () =>{
-        setIsHover(false);
-    }
-
-    return(
-        <div className = "tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            {children}
-            {isHover && (
-                <div className="tooltiptext">
-                    <p className="tooltip">{text}</p>
-                </div>
-            )}
+  return (
+    <div className="tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {children}
+      {isHover && (
+        <div className="tooltiptext">
+          <div>
+            <p className="tooltip">{text}</p>
+          </div>
         </div>
-    )
-}
+      )}
+
+        
+    </div>
+  );
+};
 
 export default SecondToolTip;
